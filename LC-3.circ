@@ -1,0 +1,2872 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.14.6" version="1.0">
+  This file is intended to be loaded by Logisim-evolution (https://github.com/reds-heig/logisim-evolution).
+
+  <lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+      <a name="appear" val="right"/>
+    </tool>
+    <tool name="Pin">
+      <a name="facing" val="south"/>
+    </tool>
+    <tool name="Probe">
+      <a name="facing" val="west"/>
+      <a name="labelloc" val="east"/>
+    </tool>
+    <tool name="Tunnel">
+      <a name="facing" val="east"/>
+    </tool>
+    <tool name="Pull Resistor">
+      <a name="facing" val="east"/>
+    </tool>
+    <tool name="Constant">
+      <a name="width" val="16"/>
+      <a name="value" val="0xf000"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2">
+    <tool name="Multiplexer">
+      <a name="enable" val="false"/>
+    </tool>
+    <tool name="Demultiplexer">
+      <a name="enable" val="false"/>
+    </tool>
+  </lib>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#HDL-IP" name="6">
+    <tool name="VHDL Entity">
+      <a name="content">--------------------------------------------------------------------------------&#13;
+-- HEIG-VD, institute REDS, 1400 Yverdon-les-Bains&#13;
+-- Project :&#13;
+-- File    :&#13;
+-- Autor   :&#13;
+-- Date    :&#13;
+--&#13;
+--------------------------------------------------------------------------------&#13;
+-- Description :&#13;
+--&#13;
+--------------------------------------------------------------------------------&#13;
+&#13;
+library ieee;&#13;
+  use ieee.std_logic_1164.all;&#13;
+  --use ieee.numeric_std.all;&#13;
+&#13;
+entity VHDL_Component is&#13;
+  port(&#13;
+  ------------------------------------------------------------------------------&#13;
+  --Insert input ports below&#13;
+    horloge_i  : in  std_logic;                    -- input bit example&#13;
+    val_i      : in  std_logic_vector(3 downto 0); -- input vector example&#13;
+  ------------------------------------------------------------------------------&#13;
+  --Insert output ports below&#13;
+    max_o      : out std_logic;                    -- output bit example&#13;
+    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example&#13;
+    );&#13;
+end VHDL_Component;&#13;
+&#13;
+--------------------------------------------------------------------------------&#13;
+--Complete your VHDL description below&#13;
+architecture type_architecture of VHDL_Component is&#13;
+&#13;
+&#13;
+begin&#13;
+&#13;
+&#13;
+end type_architecture;&#13;
+</a>
+    </tool>
+  </lib>
+  <lib desc="#TCL" name="7">
+    <tool name="TclGeneric">
+      <a name="content">library ieee;&#13;
+use ieee.std_logic_1164.all;&#13;
+&#13;
+entity TCL_Generic is&#13;
+  port(&#13;
+    --Insert input ports below&#13;
+    horloge_i  : in  std_logic;                    -- input bit example&#13;
+    val_i      : in  std_logic_vector(3 downto 0); -- input vector example&#13;
+&#13;
+	  --Insert output ports below&#13;
+    max_o      : out std_logic;                    -- output bit example&#13;
+    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example&#13;
+  );&#13;
+end TCL_Generic;&#13;
+</a>
+    </tool>
+  </lib>
+  <lib desc="#Base" name="8">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <lib desc="#BFH-Praktika" name="9"/>
+  <main name="main"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+    <a name="tickmain" val="half_period"/>
+  </options>
+  <mappings>
+    <tool lib="8" map="Button2" name="Menu Tool"/>
+    <tool lib="8" map="Button3" name="Menu Tool"/>
+    <tool lib="8" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="8" name="Poke Tool"/>
+    <tool lib="8" name="Edit Tool"/>
+    <tool lib="8" name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin"/>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="main">
+    <a name="circuit" val="main"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="circuitnamedbox" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <appear>
+      <rect height="20" stroke="none" width="40" x="60" y="60"/>
+      <rect fill="none" height="30" stroke="#000000" stroke-width="2" width="40" x="60" y="50"/>
+      <text fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="80" y="74">main</text>
+      <circ-anchor facing="east" height="6" width="6" x="47" y="47"/>
+    </appear>
+    <wire from="(650,770)" to="(650,780)"/>
+    <wire from="(930,1250)" to="(980,1250)"/>
+    <wire from="(530,610)" to="(530,620)"/>
+    <wire from="(460,1230)" to="(520,1230)"/>
+    <wire from="(690,1210)" to="(740,1210)"/>
+    <wire from="(810,210)" to="(810,240)"/>
+    <wire from="(770,240)" to="(810,240)"/>
+    <wire from="(670,650)" to="(670,680)"/>
+    <wire from="(770,90)" to="(770,120)"/>
+    <wire from="(210,1210)" to="(210,1230)"/>
+    <wire from="(460,1200)" to="(460,1230)"/>
+    <wire from="(400,1250)" to="(400,1340)"/>
+    <wire from="(510,1310)" to="(510,1460)"/>
+    <wire from="(480,1290)" to="(520,1290)"/>
+    <wire from="(960,670)" to="(980,670)"/>
+    <wire from="(940,670)" to="(960,670)"/>
+    <wire from="(1060,320)" to="(1060,370)"/>
+    <wire from="(690,1170)" to="(690,1210)"/>
+    <wire from="(1010,620)" to="(1030,620)"/>
+    <wire from="(490,1460)" to="(510,1460)"/>
+    <wire from="(500,1210)" to="(520,1210)"/>
+    <wire from="(630,780)" to="(650,780)"/>
+    <wire from="(670,630)" to="(700,630)"/>
+    <wire from="(670,650)" to="(700,650)"/>
+    <wire from="(690,1230)" to="(720,1230)"/>
+    <wire from="(370,1480)" to="(390,1480)"/>
+    <wire from="(370,1410)" to="(380,1410)"/>
+    <wire from="(370,1430)" to="(380,1430)"/>
+    <wire from="(460,1500)" to="(470,1500)"/>
+    <wire from="(930,1190)" to="(930,1250)"/>
+    <wire from="(330,1350)" to="(340,1350)"/>
+    <wire from="(690,1230)" to="(690,1290)"/>
+    <wire from="(720,1290)" to="(980,1290)"/>
+    <wire from="(690,670)" to="(700,670)"/>
+    <wire from="(410,1420)" to="(480,1420)"/>
+    <wire from="(660,680)" to="(670,680)"/>
+    <wire from="(530,610)" to="(540,610)"/>
+    <wire from="(520,620)" to="(530,620)"/>
+    <wire from="(530,590)" to="(540,590)"/>
+    <wire from="(930,310)" to="(1010,310)"/>
+    <wire from="(510,1310)" to="(520,1310)"/>
+    <wire from="(610,650)" to="(620,650)"/>
+    <wire from="(610,630)" to="(620,630)"/>
+    <wire from="(650,640)" to="(700,640)"/>
+    <wire from="(480,1290)" to="(480,1420)"/>
+    <wire from="(1010,620)" to="(1010,630)"/>
+    <wire from="(940,370)" to="(1060,370)"/>
+    <wire from="(820,1230)" to="(820,1240)"/>
+    <wire from="(230,1190)" to="(410,1190)"/>
+    <wire from="(380,1210)" to="(380,1220)"/>
+    <wire from="(400,1250)" to="(520,1250)"/>
+    <wire from="(1000,90)" to="(1000,120)"/>
+    <wire from="(470,1480)" to="(470,1500)"/>
+    <wire from="(670,600)" to="(670,630)"/>
+    <wire from="(960,580)" to="(960,670)"/>
+    <wire from="(570,600)" to="(670,600)"/>
+    <wire from="(700,90)" to="(700,120)"/>
+    <wire from="(120,170)" to="(120,190)"/>
+    <wire from="(700,550)" to="(940,550)"/>
+    <wire from="(690,670)" to="(690,750)"/>
+    <wire from="(740,1270)" to="(980,1270)"/>
+    <wire from="(830,1210)" to="(850,1210)"/>
+    <wire from="(700,550)" to="(700,590)"/>
+    <wire from="(910,1190)" to="(930,1190)"/>
+    <wire from="(1040,320)" to="(1060,320)"/>
+    <wire from="(380,1210)" to="(410,1210)"/>
+    <wire from="(370,1340)" to="(400,1340)"/>
+    <wire from="(1090,580)" to="(1100,580)"/>
+    <wire from="(670,750)" to="(690,750)"/>
+    <wire from="(670,1230)" to="(690,1230)"/>
+    <wire from="(670,1210)" to="(690,1210)"/>
+    <wire from="(1120,1250)" to="(1130,1250)"/>
+    <wire from="(300,1220)" to="(320,1220)"/>
+    <wire from="(360,1220)" to="(380,1220)"/>
+    <wire from="(440,1200)" to="(460,1200)"/>
+    <wire from="(390,1440)" to="(390,1480)"/>
+    <wire from="(190,1310)" to="(210,1310)"/>
+    <wire from="(820,1230)" to="(850,1230)"/>
+    <wire from="(480,630)" to="(490,630)"/>
+    <wire from="(480,610)" to="(490,610)"/>
+    <wire from="(960,580)" to="(1030,580)"/>
+    <wire from="(190,1200)" to="(200,1200)"/>
+    <wire from="(200,1330)" to="(210,1330)"/>
+    <wire from="(190,1180)" to="(200,1180)"/>
+    <wire from="(720,1230)" to="(720,1290)"/>
+    <wire from="(740,1210)" to="(740,1270)"/>
+    <wire from="(120,190)" to="(130,190)"/>
+    <wire from="(1000,330)" to="(1010,330)"/>
+    <wire from="(940,370)" to="(940,550)"/>
+    <wire from="(840,1190)" to="(850,1190)"/>
+    <wire from="(270,1330)" to="(340,1330)"/>
+    <wire from="(630,740)" to="(640,740)"/>
+    <wire from="(630,760)" to="(640,760)"/>
+    <comp lib="8" loc="(979,57)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(980,670)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="IR"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="4" loc="(700,580)" name="RAM">
+      <a name="addrWidth" val="16"/>
+      <a name="dataWidth" val="16"/>
+      <a name="trigger" val="falling"/>
+      <a name="databus" val="bibus"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp lib="0" loc="(1100,580)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="LDval"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(1030,600)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="getOpON"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="4" loc="(1030,550)" name="Register">
+      <a name="width" val="16"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="8" loc="(1059,536)" name="Text">
+      <a name="text" val="until phase 4"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(1063,520)" name="Text">
+      <a name="text" val="wait to store value "/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="1" loc="(570,600)" name="AND Gate">
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="1" loc="(650,640)" name="OR Gate">
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="0" loc="(610,630)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="fetchON"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(610,650)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="getOpON"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="1" loc="(520,620)" name="OR Gate">
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="0" loc="(480,630)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="isSTR"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(480,610)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="isST"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="8" loc="(529,104)" name="Text">
+      <a name="text" val="ADD R2, R0, R1"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(554,82)" name="Text">
+      <a name="text" val="Some instructions to test (all work):"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(636,121)" name="Text">
+      <a name="text" val="1883"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(526,121)" name="Text">
+      <a name="text" val="1401"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(642,103)" name="Text">
+      <a name="text" val="ADD R4, R2, R3"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(530,590)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="evalAddON"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(740,430)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="isST"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(740,330)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="DRorSR"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(740,390)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="isLD"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(740,410)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="isLDR"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(740,470)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="evalAddON"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(740,310)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="PCout"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(740,370)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="6"/>
+      <a name="label" val="PCoffset6"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(740,450)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="isSTR"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(740,350)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="9"/>
+      <a name="label" val="PCoffset9"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp loc="(930,310)" name="pcSelector"/>
+    <comp lib="0" loc="(740,510)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="isNotArithmetic"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(740,490)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="fetchON"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="8" loc="(1057,260)" name="Text">
+      <a name="text" val="address to get instruction during FETCH"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(1061,275)" name="Text">
+      <a name="text" val="otherwise, will use the offset"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(1020,340)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="fetchON"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(1000,330)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="PCout"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="2" loc="(1040,320)" name="Multiplexer">
+      <a name="width" val="16"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="8" loc="(1064,291)" name="Text">
+      <a name="text" val="PC to store/write with"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(1058,245)" name="Text">
+      <a name="text" val="MUX will direct PC to proper"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(630,780)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="isSTR"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(630,760)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="STRsr"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(630,740)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="DRorSR"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="2" loc="(670,750)" name="Multiplexer">
+      <a name="width" val="16"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="8" loc="(515,565)" name="Text">
+      <a name="text" val="with the proper operation"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(600,821)" name="Text">
+      <a name="text" val="depending on if it's ST or STR"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(601,806)" name="Text">
+      <a name="text" val="MUX decides which value to store"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(740,116)" name="Text">
+      <a name="text" val="c000"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(736,99)" name="Text">
+      <a name="text" val="JMP R0"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(813,113)" name="Text">
+      <a name="text" val="260a"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(809,99)" name="Text">
+      <a name="text" val="LD R3 #10"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(921,116)" name="Text">
+      <a name="text" val="6649"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(919,99)" name="Text">
+      <a name="text" val="LDR desR3 bR1 #9"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(1123,101)" name="Text">
+      <a name="text" val="STR srR3 bR6 #10"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(1033,117)" name="Text">
+      <a name="text" val="3403"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(1129,118)" name="Text">
+      <a name="text" val="778a"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(1035,101)" name="Text">
+      <a name="text" val="ST R2 3"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp loc="(360,190)" name="controlUnit"/>
+    <comp lib="0" loc="(130,250)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="IR"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(360,230)" name="Tunnel">
+      <a name="label" val="fetchON"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(360,370)" name="Tunnel">
+      <a name="width" val="3"/>
+      <a name="label" val="s1Reg"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(360,450)" name="Tunnel">
+      <a name="width" val="6"/>
+      <a name="label" val="PCoffset6"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(360,250)" name="Tunnel">
+      <a name="label" val="decodeON"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(360,330)" name="Tunnel">
+      <a name="width" val="4"/>
+      <a name="label" val="opCode"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(360,270)" name="Tunnel">
+      <a name="label" val="evalAddON"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(360,430)" name="Tunnel">
+      <a name="width" val="9"/>
+      <a name="label" val="PCoffset9"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(360,290)" name="Tunnel">
+      <a name="label" val="getOpON"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(360,310)" name="Tunnel">
+      <a name="label" val="executeON"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(360,190)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="PCout"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(360,390)" name="Tunnel">
+      <a name="width" val="3"/>
+      <a name="label" val="s2Reg"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(130,230)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="isJMP"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(360,350)" name="Tunnel">
+      <a name="width" val="3"/>
+      <a name="label" val="dReg"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(130,210)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="DRorSR"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(360,410)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="fullInstruction"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(360,210)" name="Tunnel">
+      <a name="label" val="storeON"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(120,730)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="fullInstruction"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(390,750)" name="Tunnel">
+      <a name="label" val="isEmpty"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(390,730)" name="Tunnel">
+      <a name="label" val="isNotArithmetic"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(390,770)" name="Tunnel">
+      <a name="label" val="isJMP"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp loc="(390,730)" name="memoryOperationManagement"/>
+    <comp lib="0" loc="(390,850)" name="Tunnel">
+      <a name="label" val="isSTR"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(120,750)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="4"/>
+      <a name="label" val="opCode"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(390,790)" name="Tunnel">
+      <a name="label" val="isLD"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(390,830)" name="Tunnel">
+      <a name="label" val="isLDR"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(390,810)" name="Tunnel">
+      <a name="label" val="isST"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="8" loc="(422,1173)" name="Text">
+      <a name="text" val="store on phase 6"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(706,1331)" name="Text">
+      <a name="text" val="if STR, value"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(163,1371)" name="Text">
+      <a name="text" val="isArithmetic"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="8" loc="(433,1564)" name="Text">
+      <a name="text" val="as S1, but this only applies for Storing"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(190,1200)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="LDval"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(1130,1250)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="ALUresult"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="8" loc="(201,1143)" name="Text">
+      <a name="text" val="choose between arithmetic"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(370,1430)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="3"/>
+      <a name="label" val="dReg"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="2" loc="(230,1190)" name="Multiplexer">
+      <a name="width" val="16"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(460,1450)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="3"/>
+      <a name="label" val="s2Reg"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="8" loc="(708,1343)" name="Text">
+      <a name="text" val="to write to RAM"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp loc="(670,1210)" name="Registers"/>
+    <comp lib="0" loc="(330,1350)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="storeON"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="1" loc="(370,1340)" name="AND Gate">
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="4" loc="(850,1160)" name="Register">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="2" loc="(410,1420)" name="Multiplexer">
+      <a name="width" val="3"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="8" loc="(433,1533)" name="Text">
+      <a name="text" val="If ST, change S1reg to the dReg value so it can"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="1" loc="(440,1200)" name="AND Gate">
+      <a name="width" val="16"/>
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="0" loc="(460,1470)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="3"/>
+      <a name="label" val="dReg"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(370,1480)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="isST"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(520,1270)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="3"/>
+      <a name="label" val="dReg"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="8" loc="(265,1292)" name="Text">
+      <a name="text" val="if it's arithmetic or LD, WE=true when phase=store"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(460,1500)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="isSTR"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(300,1220)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="storeON"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="8" loc="(201,1158)" name="Text">
+      <a name="text" val="or memory operation value"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(689,1097)" name="Text">
+      <a name="text" val="used for changing PC"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="2" loc="(490,1460)" name="Multiplexer">
+      <a name="width" val="3"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(690,1170)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="16"/>
+      <a name="label" val="DRorSR"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="1" loc="(270,1330)" name="XOR Gate">
+      <a name="inputs" val="3"/>
+      <a name="negate2" val="true"/>
+    </comp>
+    <comp lib="0" loc="(190,1310)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="isLD"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="8" loc="(420,1593)" name="Text">
+      <a name="text" val="(Same logic for second MUX but for STR and sr2 instead)"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(880,1137)" name="Text">
+      <a name="text" val="waits until phase 5"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(210,1230)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="isNotArithmetic"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="8" loc="(690,1111)" name="Text">
+      <a name="text" val="and specifying reg"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(690,1290)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="16"/>
+      <a name="label" val="STRsr"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="8" loc="(687,1135)" name="Text">
+      <a name="text" val="memory operations"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(688,1124)" name="Text">
+      <a name="text" val="to store info to from"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(830,1210)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="executeON"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="8" loc="(438,1549)" name="Text">
+      <a name="text" val="write the proper value, as dReg shares the same bit-range "/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(879,1152)" name="Text">
+      <a name="text" val="to operate"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(360,1220)" name="Bit Extender">
+      <a name="in_width" val="1"/>
+    </comp>
+    <comp lib="0" loc="(200,1330)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="isLDR"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp loc="(1120,1250)" name="ALU"/>
+    <comp lib="0" loc="(200,1350)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="isNotArithmetic"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(190,1180)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="ALUresult"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(370,1410)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="3"/>
+      <a name="label" val="s1Reg"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(840,1190)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="fullInstruction"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="8" loc="(511,548)" name="Text">
+      <a name="text" val="WE only avaliable on phase 3 and"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(770,240)" name="Clock"/>
+    <comp lib="0" loc="(810,210)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(1010,630)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(500,1210)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(820,1240)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(120,170)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(660,680)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="8" loc="(301,32)" name="Text">
+      <a name="text" val="DEV NOTE: the source value for a ST operation will be stored at the appropriate Address +1"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+  </circuit>
+  <circuit name="controlUnit">
+    <a name="circuit" val="controlUnit"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="circuitnamedbox" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <wire from="(350,240)" to="(410,240)"/>
+    <wire from="(830,90)" to="(830,100)"/>
+    <wire from="(130,500)" to="(190,500)"/>
+    <wire from="(160,60)" to="(160,70)"/>
+    <wire from="(430,190)" to="(430,210)"/>
+    <wire from="(430,230)" to="(430,250)"/>
+    <wire from="(880,250)" to="(920,250)"/>
+    <wire from="(980,210)" to="(1020,210)"/>
+    <wire from="(430,250)" to="(530,250)"/>
+    <wire from="(310,420)" to="(350,420)"/>
+    <wire from="(310,480)" to="(350,480)"/>
+    <wire from="(490,220)" to="(530,220)"/>
+    <wire from="(830,100)" to="(850,100)"/>
+    <wire from="(830,120)" to="(850,120)"/>
+    <wire from="(1020,210)" to="(1040,210)"/>
+    <wire from="(990,300)" to="(1010,300)"/>
+    <wire from="(350,250)" to="(380,250)"/>
+    <wire from="(280,550)" to="(300,550)"/>
+    <wire from="(1020,110)" to="(1020,210)"/>
+    <wire from="(380,160)" to="(380,200)"/>
+    <wire from="(890,210)" to="(920,210)"/>
+    <wire from="(890,230)" to="(920,230)"/>
+    <wire from="(380,160)" to="(530,160)"/>
+    <wire from="(350,220)" to="(490,220)"/>
+    <wire from="(300,240)" to="(310,240)"/>
+    <wire from="(310,490)" to="(320,490)"/>
+    <wire from="(310,470)" to="(320,470)"/>
+    <wire from="(280,500)" to="(290,500)"/>
+    <wire from="(250,290)" to="(330,290)"/>
+    <wire from="(350,230)" to="(430,230)"/>
+    <wire from="(350,210)" to="(430,210)"/>
+    <wire from="(280,500)" to="(280,550)"/>
+    <wire from="(60,260)" to="(70,260)"/>
+    <wire from="(430,190)" to="(490,190)"/>
+    <wire from="(90,60)" to="(90,70)"/>
+    <wire from="(1060,270)" to="(1060,300)"/>
+    <wire from="(410,280)" to="(530,280)"/>
+    <wire from="(330,280)" to="(330,290)"/>
+    <wire from="(280,550)" to="(280,570)"/>
+    <wire from="(320,490)" to="(320,510)"/>
+    <wire from="(320,450)" to="(320,470)"/>
+    <wire from="(860,130)" to="(860,160)"/>
+    <wire from="(280,570)" to="(280,600)"/>
+    <wire from="(490,190)" to="(530,190)"/>
+    <wire from="(1060,270)" to="(1070,270)"/>
+    <wire from="(1050,300)" to="(1060,300)"/>
+    <wire from="(1110,260)" to="(1120,260)"/>
+    <wire from="(250,500)" to="(280,500)"/>
+    <wire from="(1040,210)" to="(1040,250)"/>
+    <wire from="(350,200)" to="(380,200)"/>
+    <wire from="(320,510)" to="(350,510)"/>
+    <wire from="(320,450)" to="(350,450)"/>
+    <wire from="(890,110)" to="(890,210)"/>
+    <wire from="(310,420)" to="(310,460)"/>
+    <wire from="(1040,250)" to="(1070,250)"/>
+    <wire from="(410,240)" to="(410,280)"/>
+    <wire from="(380,310)" to="(530,310)"/>
+    <wire from="(380,250)" to="(380,310)"/>
+    <wire from="(820,90)" to="(830,90)"/>
+    <wire from="(880,110)" to="(890,110)"/>
+    <comp lib="0" loc="(160,70)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(160,60)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="label" val="clock"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(90,70)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="power"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(90,60)" name="Constant">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(1020,110)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="label" val="PCout"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(860,160)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="label" val="isJMP"/>
+    </comp>
+    <comp lib="0" loc="(1050,300)" name="Bit Extender">
+      <a name="in_width" val="1"/>
+      <a name="type" val="zero"/>
+    </comp>
+    <comp lib="0" loc="(1120,260)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="added"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(890,230)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="decodeON"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(990,300)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="power"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(880,250)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="4" loc="(920,180)" name="Register">
+      <a name="width" val="16"/>
+      <a name="label" val="PC"/>
+    </comp>
+    <comp lib="3" loc="(1110,260)" name="Adder">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="2" loc="(880,110)" name="Multiplexer">
+      <a name="width" val="16"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(60,260)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="4" loc="(70,180)" name="Counter">
+      <a name="width" val="3"/>
+      <a name="max" val="0x5"/>
+      <a name="label" val="phaseCounter"/>
+    </comp>
+    <comp lib="0" loc="(300,240)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="power"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="2" loc="(310,240)" name="Demultiplexer">
+      <a name="select" val="3"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(350,420)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+      <a name="label" val="opCode"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(290,500)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="16"/>
+      <a name="bit0" val="3"/>
+      <a name="bit1" val="3"/>
+      <a name="bit2" val="3"/>
+      <a name="bit3" val="none"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="2"/>
+      <a name="bit7" val="2"/>
+      <a name="bit8" val="2"/>
+      <a name="bit9" val="1"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="0"/>
+      <a name="bit13" val="0"/>
+      <a name="bit14" val="0"/>
+      <a name="bit15" val="0"/>
+    </comp>
+    <comp lib="0" loc="(350,510)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="3"/>
+      <a name="label" val="s2Reg"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(350,480)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="3"/>
+      <a name="label" val="s1Reg"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(350,450)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="3"/>
+      <a name="label" val="dReg"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(820,90)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="added"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(490,220)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="decodeON"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(530,220)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="decode_2"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(530,160)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="store_6"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(530,190)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="fetch_1"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(530,310)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="execute_5"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(530,250)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="evalAddress_3"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(530,280)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="getOperands_4"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(490,190)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="fetchON"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(190,540)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(190,520)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="fetchON"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="4" loc="(190,470)" name="Register">
+      <a name="width" val="16"/>
+      <a name="label" val="InstrReg"/>
+    </comp>
+    <comp lib="0" loc="(130,500)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="IR"/>
+    </comp>
+    <comp lib="0" loc="(830,120)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="JMPdest"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(300,550)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="label" val="fullInstruction"/>
+      <a name="labelloc" val="east"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(280,570)" name="Splitter">
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="16"/>
+      <a name="appear" val="right"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="0"/>
+      <a name="bit9" val="none"/>
+      <a name="bit10" val="none"/>
+      <a name="bit11" val="none"/>
+      <a name="bit12" val="none"/>
+      <a name="bit13" val="none"/>
+      <a name="bit14" val="none"/>
+      <a name="bit15" val="none"/>
+    </comp>
+    <comp lib="0" loc="(280,600)" name="Splitter">
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="16"/>
+      <a name="appear" val="right"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+      <a name="bit8" val="none"/>
+      <a name="bit9" val="none"/>
+      <a name="bit10" val="none"/>
+      <a name="bit11" val="none"/>
+      <a name="bit12" val="none"/>
+      <a name="bit13" val="none"/>
+      <a name="bit14" val="none"/>
+      <a name="bit15" val="none"/>
+    </comp>
+    <comp lib="0" loc="(300,580)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="9"/>
+      <a name="label" val="PCoffset9"/>
+      <a name="labelloc" val="east"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(300,610)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="6"/>
+      <a name="label" val="PCoffset6"/>
+      <a name="labelloc" val="east"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="8" loc="(363,695)" name="Text">
+      <a name="text" val="operations"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(359,665)" name="Text">
+      <a name="text" val="that you can extract from the instruction"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(359,678)" name="Text">
+      <a name="text" val="that will make it easier to perform the"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(361,650)" name="Text">
+      <a name="text" val="These are all of the pieces of information"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(494,142)" name="Text">
+      <a name="text" val="Internal phase counter. In charge of order of operations"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(989,384)" name="Text">
+      <a name="text" val="to whatever the JMP destination is"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(991,349)" name="Text">
+      <a name="text" val="Program Counter increments by one every decode phase unless"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(995,367)" name="Text">
+      <a name="text" val="there's a JMP instruction. In that case, the MUX sets the PC"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+  </circuit>
+  <circuit name="ALU">
+    <a name="circuit" val="ALU"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif bold 8"/>
+    <a name="circuitnamedbox" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <wire from="(760,300)" to="(760,310)"/>
+    <wire from="(910,290)" to="(960,290)"/>
+    <wire from="(110,700)" to="(360,700)"/>
+    <wire from="(120,120)" to="(180,120)"/>
+    <wire from="(200,70)" to="(260,70)"/>
+    <wire from="(110,420)" to="(360,420)"/>
+    <wire from="(890,310)" to="(890,320)"/>
+    <wire from="(390,700)" to="(440,700)"/>
+    <wire from="(110,420)" to="(110,560)"/>
+    <wire from="(110,560)" to="(110,700)"/>
+    <wire from="(300,640)" to="(300,650)"/>
+    <wire from="(310,500)" to="(310,510)"/>
+    <wire from="(690,290)" to="(750,290)"/>
+    <wire from="(220,470)" to="(220,610)"/>
+    <wire from="(340,600)" to="(340,620)"/>
+    <wire from="(110,560)" to="(350,560)"/>
+    <wire from="(720,240)" to="(720,270)"/>
+    <wire from="(780,280)" to="(880,280)"/>
+    <wire from="(180,90)" to="(180,120)"/>
+    <wire from="(400,430)" to="(440,430)"/>
+    <wire from="(400,580)" to="(440,580)"/>
+    <wire from="(690,270)" to="(690,290)"/>
+    <wire from="(200,120)" to="(230,120)"/>
+    <wire from="(860,300)" to="(880,300)"/>
+    <wire from="(330,480)" to="(350,480)"/>
+    <wire from="(320,620)" to="(340,620)"/>
+    <wire from="(720,270)" to="(750,270)"/>
+    <wire from="(220,360)" to="(220,470)"/>
+    <wire from="(350,440)" to="(350,480)"/>
+    <wire from="(180,120)" to="(200,120)"/>
+    <wire from="(300,70)" to="(310,70)"/>
+    <wire from="(290,490)" to="(300,490)"/>
+    <wire from="(280,630)" to="(290,630)"/>
+    <wire from="(340,600)" to="(350,600)"/>
+    <wire from="(350,440)" to="(360,440)"/>
+    <wire from="(220,470)" to="(300,470)"/>
+    <wire from="(200,80)" to="(210,80)"/>
+    <wire from="(220,610)" to="(290,610)"/>
+    <wire from="(110,360)" to="(110,420)"/>
+    <comp lib="0" loc="(300,70)" name="Bit Extender">
+      <a name="in_width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(180,90)" name="Splitter">
+      <a name="incoming" val="16"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="1"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+      <a name="bit8" val="none"/>
+      <a name="bit9" val="none"/>
+      <a name="bit10" val="none"/>
+      <a name="bit11" val="none"/>
+      <a name="bit12" val="none"/>
+      <a name="bit13" val="none"/>
+      <a name="bit14" val="none"/>
+      <a name="bit15" val="none"/>
+    </comp>
+    <comp lib="0" loc="(200,120)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="16"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="none"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+      <a name="bit8" val="none"/>
+      <a name="bit9" val="none"/>
+      <a name="bit10" val="none"/>
+      <a name="bit11" val="none"/>
+      <a name="bit12" val="none"/>
+      <a name="bit13" val="none"/>
+      <a name="bit14" val="0"/>
+      <a name="bit15" val="none"/>
+    </comp>
+    <comp lib="0" loc="(310,70)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="immVal"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(230,120)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="16"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="none"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+      <a name="bit8" val="none"/>
+      <a name="bit9" val="none"/>
+      <a name="bit10" val="none"/>
+      <a name="bit11" val="none"/>
+      <a name="bit12" val="none"/>
+      <a name="bit13" val="none"/>
+      <a name="bit14" val="none"/>
+      <a name="bit15" val="0"/>
+    </comp>
+    <comp lib="0" loc="(210,140)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="b14"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(240,140)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="b15"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(210,80)" name="Tunnel">
+      <a name="label" val="check"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(120,120)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="instr"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="8" loc="(226,178)" name="Text">
+      <a name="text" val="Collecting bit 14 and 15 for"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(226,192)" name="Text">
+      <a name="text" val="comparison"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="1" loc="(400,580)" name="AND Gate">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(280,630)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="immVal"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="1" loc="(390,700)" name="NOT Gate">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(300,650)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="check"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(440,430)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="addVal"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="2" loc="(330,480)" name="Multiplexer">
+      <a name="width" val="16"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(310,510)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="check"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(440,700)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="notVal"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(220,360)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="width" val="16"/>
+      <a name="label" val="in2"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(440,580)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="andVal"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="3" loc="(400,430)" name="Adder">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="2" loc="(320,620)" name="Multiplexer">
+      <a name="width" val="16"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(110,360)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="width" val="16"/>
+      <a name="label" val="in1"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(290,490)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="immVal"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(760,310)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="b14"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(960,290)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="label" val="answer"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(690,270)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="16"/>
+      <a name="label" val="andVal"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="8" loc="(999,325)" name="Text">
+      <a name="text" val="filtered output"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(860,300)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="notVal"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="2" loc="(780,280)" name="Multiplexer">
+      <a name="width" val="16"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(890,320)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="b15"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="2" loc="(910,290)" name="Multiplexer">
+      <a name="width" val="16"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(720,240)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="16"/>
+      <a name="label" val="addVal"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="8" loc="(881,441)" name="Text">
+      <a name="text" val="which will change it to NOT"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(886,396)" name="Text">
+      <a name="text" val="assumes operation is whatever"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(888,425)" name="Text">
+      <a name="text" val="bit_15 = 1"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(889,380)" name="Text">
+      <a name="text" val="2nd MUX:"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(883,410)" name="Text">
+      <a name="text" val="came out of 1st MUX, unless"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(727,197)" name="Text">
+      <a name="text" val="which will change it to AND"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(731,169)" name="Text">
+      <a name="text" val="assumes operation is "/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(728,156)" name="Text">
+      <a name="text" val="1st MUX:"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(729,184)" name="Text">
+      <a name="text" val="ADD unless bit_14 = 1"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(482,473)" name="Text">
+      <a name="text" val="The proper answer if the operation "/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(471,489)" name="Text">
+      <a name="text" val="is ADD"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(479,633)" name="Text">
+      <a name="text" val="is AND"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(490,617)" name="Text">
+      <a name="text" val="The proper answer if the operation "/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(466,760)" name="Text">
+      <a name="text" val="is NOT"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(477,744)" name="Text">
+      <a name="text" val="The proper answer if the operation "/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(168,296)" name="Text">
+      <a name="text" val="The values to be operated on"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(83,78)" name="Text">
+      <a name="text" val="be output"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(82,63)" name="Text">
+      <a name="text" val="The instruction to"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+  </circuit>
+  <circuit name="Registers">
+    <a name="circuit" val="Registers"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="circuitnamedbox" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <wire from="(690,490)" to="(690,500)"/>
+    <wire from="(690,290)" to="(690,300)"/>
+    <wire from="(410,440)" to="(470,440)"/>
+    <wire from="(680,280)" to="(730,280)"/>
+    <wire from="(210,250)" to="(210,640)"/>
+    <wire from="(220,240)" to="(220,630)"/>
+    <wire from="(200,260)" to="(200,650)"/>
+    <wire from="(190,270)" to="(190,660)"/>
+    <wire from="(420,560)" to="(470,560)"/>
+    <wire from="(180,200)" to="(300,200)"/>
+    <wire from="(690,500)" to="(730,500)"/>
+    <wire from="(680,430)" to="(720,430)"/>
+    <wire from="(680,570)" to="(720,570)"/>
+    <wire from="(690,520)" to="(730,520)"/>
+    <wire from="(410,440)" to="(410,650)"/>
+    <wire from="(710,450)" to="(710,480)"/>
+    <wire from="(720,540)" to="(720,570)"/>
+    <wire from="(190,660)" to="(420,660)"/>
+    <wire from="(160,280)" to="(160,310)"/>
+    <wire from="(700,240)" to="(700,260)"/>
+    <wire from="(700,300)" to="(700,320)"/>
+    <wire from="(720,200)" to="(720,240)"/>
+    <wire from="(680,470)" to="(700,470)"/>
+    <wire from="(710,480)" to="(730,480)"/>
+    <wire from="(680,550)" to="(700,550)"/>
+    <wire from="(770,280)" to="(790,280)"/>
+    <wire from="(680,220)" to="(710,220)"/>
+    <wire from="(700,260)" to="(730,260)"/>
+    <wire from="(700,300)" to="(730,300)"/>
+    <wire from="(720,600)" to="(750,600)"/>
+    <wire from="(200,650)" to="(410,650)"/>
+    <wire from="(140,310)" to="(160,310)"/>
+    <wire from="(460,220)" to="(470,220)"/>
+    <wire from="(160,120)" to="(170,120)"/>
+    <wire from="(180,210)" to="(250,210)"/>
+    <wire from="(230,560)" to="(300,560)"/>
+    <wire from="(750,550)" to="(750,600)"/>
+    <wire from="(680,260)" to="(690,260)"/>
+    <wire from="(680,300)" to="(690,300)"/>
+    <wire from="(720,540)" to="(730,540)"/>
+    <wire from="(720,240)" to="(730,240)"/>
+    <wire from="(690,260)" to="(690,270)"/>
+    <wire from="(690,520)" to="(690,530)"/>
+    <wire from="(210,640)" to="(400,640)"/>
+    <wire from="(680,510)" to="(730,510)"/>
+    <wire from="(180,220)" to="(240,220)"/>
+    <wire from="(400,320)" to="(400,640)"/>
+    <wire from="(240,440)" to="(300,440)"/>
+    <wire from="(230,230)" to="(230,560)"/>
+    <wire from="(180,230)" to="(230,230)"/>
+    <wire from="(250,320)" to="(300,320)"/>
+    <wire from="(690,270)" to="(730,270)"/>
+    <wire from="(680,200)" to="(720,200)"/>
+    <wire from="(680,340)" to="(720,340)"/>
+    <wire from="(690,290)" to="(730,290)"/>
+    <wire from="(710,220)" to="(710,250)"/>
+    <wire from="(220,630)" to="(390,630)"/>
+    <wire from="(720,310)" to="(720,340)"/>
+    <wire from="(180,240)" to="(220,240)"/>
+    <wire from="(700,470)" to="(700,490)"/>
+    <wire from="(700,530)" to="(700,550)"/>
+    <wire from="(240,220)" to="(240,440)"/>
+    <wire from="(180,250)" to="(210,250)"/>
+    <wire from="(420,560)" to="(420,660)"/>
+    <wire from="(720,430)" to="(720,470)"/>
+    <wire from="(680,240)" to="(700,240)"/>
+    <wire from="(710,250)" to="(730,250)"/>
+    <wire from="(680,320)" to="(700,320)"/>
+    <wire from="(770,510)" to="(790,510)"/>
+    <wire from="(390,200)" to="(390,630)"/>
+    <wire from="(680,450)" to="(710,450)"/>
+    <wire from="(700,490)" to="(730,490)"/>
+    <wire from="(700,530)" to="(730,530)"/>
+    <wire from="(720,370)" to="(750,370)"/>
+    <wire from="(250,210)" to="(250,320)"/>
+    <wire from="(180,260)" to="(200,260)"/>
+    <wire from="(180,270)" to="(190,270)"/>
+    <wire from="(130,240)" to="(140,240)"/>
+    <wire from="(390,200)" to="(470,200)"/>
+    <wire from="(100,70)" to="(110,70)"/>
+    <wire from="(750,320)" to="(750,370)"/>
+    <wire from="(400,320)" to="(470,320)"/>
+    <wire from="(680,490)" to="(690,490)"/>
+    <wire from="(680,530)" to="(690,530)"/>
+    <wire from="(720,470)" to="(730,470)"/>
+    <wire from="(720,310)" to="(730,310)"/>
+    <comp lib="0" loc="(100,70)" name="Pin">
+      <a name="label" val="clock"/>
+    </comp>
+    <comp lib="0" loc="(110,70)" name="Tunnel">
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(160,120)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="desVal"/>
+    </comp>
+    <comp lib="0" loc="(170,120)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="val"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="4" loc="(470,270)" name="Register">
+      <a name="width" val="16"/>
+      <a name="label" val="R5"/>
+    </comp>
+    <comp lib="4" loc="(300,270)" name="Register">
+      <a name="width" val="16"/>
+      <a name="label" val="R1"/>
+    </comp>
+    <comp lib="0" loc="(470,540)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="val"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(140,310)" name="Pin">
+      <a name="width" val="3"/>
+      <a name="label" val="desReg"/>
+    </comp>
+    <comp lib="0" loc="(300,180)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="val"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(300,220)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(360,420)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="r2"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(300,580)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="4" loc="(300,510)" name="Register">
+      <a name="width" val="16"/>
+      <a name="label" val="R3"/>
+    </comp>
+    <comp lib="0" loc="(470,300)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="val"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(530,420)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="r6"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="4" loc="(470,510)" name="Register">
+      <a name="width" val="16"/>
+      <a name="label" val="R7"/>
+    </comp>
+    <comp lib="0" loc="(360,300)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="r1"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(360,540)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="r3"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(460,220)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(300,460)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="4" loc="(470,390)" name="Register">
+      <a name="width" val="16"/>
+      <a name="label" val="R6"/>
+    </comp>
+    <comp lib="0" loc="(470,180)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="val"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(470,420)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="val"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(360,180)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="r0"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(470,580)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(470,340)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="4" loc="(300,150)" name="Register">
+      <a name="width" val="16"/>
+      <a name="label" val="R0"/>
+    </comp>
+    <comp lib="0" loc="(300,540)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="val"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(300,300)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="val"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(530,180)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="r4"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="2" loc="(140,240)" name="Demultiplexer">
+      <a name="select" val="3"/>
+    </comp>
+    <comp lib="4" loc="(470,150)" name="Register">
+      <a name="width" val="16"/>
+      <a name="label" val="R4"/>
+    </comp>
+    <comp lib="0" loc="(300,340)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(130,240)" name="Pin">
+      <a name="label" val="WE"/>
+    </comp>
+    <comp lib="0" loc="(530,540)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="r7"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(300,420)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="val"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(530,300)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="r5"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="4" loc="(300,390)" name="Register">
+      <a name="width" val="16"/>
+      <a name="label" val="R2"/>
+    </comp>
+    <comp lib="0" loc="(470,460)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(680,450)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="r1"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(680,570)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="r7"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(680,510)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="r4"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(680,550)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="r6"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(680,530)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="r5"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(790,510)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="label" val="sr2Val"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="2" loc="(770,510)" name="Multiplexer">
+      <a name="select" val="3"/>
+      <a name="width" val="16"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(680,470)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="r2"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(680,490)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="r3"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(720,600)" name="Pin">
+      <a name="width" val="3"/>
+      <a name="label" val="sr2"/>
+    </comp>
+    <comp lib="0" loc="(680,430)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="r0"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(680,340)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="r7"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(680,320)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="r6"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(680,260)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="r3"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(790,280)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="label" val="sr1Val"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(680,200)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="r0"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(680,220)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="r1"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(680,280)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="r4"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="0" loc="(720,370)" name="Pin">
+      <a name="width" val="3"/>
+      <a name="label" val="sr1"/>
+    </comp>
+    <comp lib="0" loc="(680,300)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="r5"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="2" loc="(770,280)" name="Multiplexer">
+      <a name="select" val="3"/>
+      <a name="width" val="16"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(680,240)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="r2"/>
+      <a name="labelfont" val="SansSerif bold 8"/>
+    </comp>
+    <comp lib="8" loc="(847,554)" name="Text">
+      <a name="text" val="outputs the value of the"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(849,568)" name="Text">
+      <a name="text" val="designated source 2 register"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(848,321)" name="Text">
+      <a name="text" val="outputs the value of the"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(849,336)" name="Text">
+      <a name="text" val="designated source 1 register"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(101,166)" name="Text">
+      <a name="text" val="when WE is enabled, the desVal"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(101,181)" name="Text">
+      <a name="text" val="is written to the specified desReg"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+  </circuit>
+  <circuit name="pcSelector">
+    <a name="circuit" val="pcSelector"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="circuitnamedbox" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <wire from="(440,730)" to="(440,800)"/>
+    <wire from="(440,730)" to="(500,730)"/>
+    <wire from="(930,350)" to="(930,360)"/>
+    <wire from="(970,350)" to="(970,360)"/>
+    <wire from="(540,970)" to="(720,970)"/>
+    <wire from="(840,340)" to="(840,350)"/>
+    <wire from="(880,340)" to="(880,350)"/>
+    <wire from="(790,260)" to="(850,260)"/>
+    <wire from="(180,540)" to="(180,550)"/>
+    <wire from="(880,270)" to="(940,270)"/>
+    <wire from="(390,730)" to="(390,740)"/>
+    <wire from="(240,980)" to="(240,990)"/>
+    <wire from="(430,1010)" to="(430,1030)"/>
+    <wire from="(140,730)" to="(180,730)"/>
+    <wire from="(340,810)" to="(380,810)"/>
+    <wire from="(690,1010)" to="(720,1010)"/>
+    <wire from="(280,810)" to="(300,810)"/>
+    <wire from="(530,720)" to="(690,720)"/>
+    <wire from="(730,250)" to="(760,250)"/>
+    <wire from="(360,790)" to="(380,790)"/>
+    <wire from="(420,990)" to="(440,990)"/>
+    <wire from="(490,980)" to="(510,980)"/>
+    <wire from="(80,730)" to="(100,730)"/>
+    <wire from="(170,40)" to="(190,40)"/>
+    <wire from="(170,160)" to="(190,160)"/>
+    <wire from="(170,100)" to="(190,100)"/>
+    <wire from="(170,280)" to="(190,280)"/>
+    <wire from="(170,220)" to="(190,220)"/>
+    <wire from="(170,340)" to="(190,340)"/>
+    <wire from="(160,710)" to="(180,710)"/>
+    <wire from="(200,990)" to="(220,990)"/>
+    <wire from="(370,990)" to="(380,990)"/>
+    <wire from="(480,1000)" to="(490,1000)"/>
+    <wire from="(430,1010)" to="(440,1010)"/>
+    <wire from="(350,770)" to="(360,770)"/>
+    <wire from="(150,690)" to="(160,690)"/>
+    <wire from="(140,960)" to="(150,960)"/>
+    <wire from="(170,570)" to="(180,570)"/>
+    <wire from="(220,560)" to="(230,560)"/>
+    <wire from="(930,290)" to="(940,290)"/>
+    <wire from="(930,350)" to="(940,350)"/>
+    <wire from="(840,340)" to="(850,340)"/>
+    <wire from="(840,280)" to="(850,280)"/>
+    <wire from="(680,760)" to="(690,760)"/>
+    <wire from="(260,960)" to="(510,960)"/>
+    <wire from="(510,740)" to="(510,750)"/>
+    <wire from="(380,1030)" to="(430,1030)"/>
+    <wire from="(360,770)" to="(360,790)"/>
+    <wire from="(490,980)" to="(490,1000)"/>
+    <wire from="(160,690)" to="(160,710)"/>
+    <wire from="(150,960)" to="(150,980)"/>
+    <wire from="(220,970)" to="(220,990)"/>
+    <wire from="(850,320)" to="(850,340)"/>
+    <wire from="(870,320)" to="(870,340)"/>
+    <wire from="(940,330)" to="(940,350)"/>
+    <wire from="(960,330)" to="(960,350)"/>
+    <wire from="(520,990)" to="(520,1010)"/>
+    <wire from="(770,990)" to="(790,990)"/>
+    <wire from="(410,710)" to="(500,710)"/>
+    <wire from="(200,950)" to="(230,950)"/>
+    <wire from="(220,720)" to="(380,720)"/>
+    <wire from="(740,740)" to="(760,740)"/>
+    <wire from="(350,700)" to="(380,700)"/>
+    <wire from="(420,800)" to="(440,800)"/>
+    <wire from="(610,760)" to="(640,760)"/>
+    <wire from="(620,1010)" to="(650,1010)"/>
+    <wire from="(970,280)" to="(1000,280)"/>
+    <wire from="(170,190)" to="(190,190)"/>
+    <wire from="(170,70)" to="(190,70)"/>
+    <wire from="(170,130)" to="(190,130)"/>
+    <wire from="(170,250)" to="(190,250)"/>
+    <wire from="(170,310)" to="(190,310)"/>
+    <wire from="(140,1000)" to="(160,1000)"/>
+    <wire from="(690,270)" to="(760,270)"/>
+    <wire from="(150,980)" to="(160,980)"/>
+    <wire from="(170,540)" to="(180,540)"/>
+    <wire from="(180,550)" to="(190,550)"/>
+    <wire from="(120,570)" to="(130,570)"/>
+    <wire from="(220,970)" to="(230,970)"/>
+    <wire from="(90,1000)" to="(100,1000)"/>
+    <wire from="(960,350)" to="(970,350)"/>
+    <wire from="(870,340)" to="(880,340)"/>
+    <comp lib="0" loc="(190,40)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="PCin"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(170,160)" name="Pin">
+      <a name="label" val="isLD"/>
+    </comp>
+    <comp lib="0" loc="(170,190)" name="Pin">
+      <a name="label" val="isLDR"/>
+    </comp>
+    <comp lib="0" loc="(190,190)" name="Tunnel">
+      <a name="label" val="isLDR"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(190,160)" name="Tunnel">
+      <a name="label" val="isLD"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(190,100)" name="Tunnel">
+      <a name="width" val="9"/>
+      <a name="label" val="PCoffset9"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(190,130)" name="Tunnel">
+      <a name="width" val="6"/>
+      <a name="label" val="PCoffset6"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(170,70)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="DRorSR"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(190,70)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="DRorSR"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(170,40)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="PCdefault"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(170,100)" name="Pin">
+      <a name="width" val="9"/>
+      <a name="label" val="PCoffset9"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="8" loc="(485,40)" name="Text">
+      <a name="text" val="This circuit determines how to increment and send the PC"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(487,57)" name="Text">
+      <a name="text" val="to the RAM based upon the operation being done"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(170,130)" name="Pin">
+      <a name="width" val="6"/>
+      <a name="label" val="PCoffset6"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(170,280)" name="Pin">
+      <a name="label" val="evalAddON"/>
+    </comp>
+    <comp lib="0" loc="(190,280)" name="Tunnel">
+      <a name="label" val="evalAddON"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(190,250)" name="Tunnel">
+      <a name="label" val="isSTR"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(170,220)" name="Pin">
+      <a name="label" val="isST"/>
+    </comp>
+    <comp lib="0" loc="(190,220)" name="Tunnel">
+      <a name="label" val="isST"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(170,250)" name="Pin">
+      <a name="label" val="isSTR"/>
+    </comp>
+    <comp lib="0" loc="(880,350)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="isLDR"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(840,280)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="ifLoad"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(730,250)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="PCin"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(840,350)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="isLD"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(930,360)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="isST"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="1" loc="(770,280)" name="NOT Gate">
+      <a name="facing" val="north"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="0" loc="(930,290)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="ifStore"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="2" loc="(880,270)" name="Multiplexer">
+      <a name="width" val="16"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(770,300)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="isNotArithmetic"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="1" loc="(860,290)" name="OR Gate">
+      <a name="facing" val="north"/>
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="2" loc="(970,280)" name="Multiplexer">
+      <a name="width" val="16"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(970,360)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="isSTR"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="2" loc="(790,260)" name="Multiplexer">
+      <a name="width" val="16"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(690,270)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="ifArithmetic"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="1" loc="(950,300)" name="OR Gate">
+      <a name="facing" val="north"/>
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="8" loc="(479,87)" name="Text">
+      <a name="text" val="This is essentially the ALU of memory operations"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(170,310)" name="Pin">
+      <a name="label" val="fetchON"/>
+    </comp>
+    <comp lib="0" loc="(190,310)" name="Tunnel">
+      <a name="label" val="fetchON"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(170,340)" name="Pin">
+      <a name="label" val="isNotArithmetic"/>
+    </comp>
+    <comp lib="0" loc="(190,340)" name="Tunnel">
+      <a name="label" val="isNotArithmetic"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(1000,280)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="label" val="PC"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="3" loc="(200,990)" name="Adder">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(790,990)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="ifStore"/>
+    </comp>
+    <comp lib="0" loc="(140,730)" name="Bit Extender">
+      <a name="in_width" val="9"/>
+    </comp>
+    <comp lib="8" loc="(109,1052)" name="Text">
+      <a name="text" val="if ST, use PC+offset"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(648,800)" name="Text">
+      <a name="text" val="only output adjusted PC when evalAdd=true"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(140,960)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="PCin"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="8" loc="(923,772)" name="Text">
+      <a name="text" val="either LD or LDR"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(132,670)" name="Text">
+      <a name="text" val="if LD, use PC+offset"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(610,760)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="evalAddON"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="8" loc="(969,990)" name="Text">
+      <a name="text" val="The proper PC value if the operation is"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(448,1069)" name="Text">
+      <a name="text" val="if STR, use baseReg+offset"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(420,990)" name="Bit Extender">
+      <a name="in_width" val="6"/>
+    </comp>
+    <comp lib="0" loc="(520,1010)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="isSTR"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(150,690)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="PCin"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(200,950)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="PCin"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="8" loc="(959,1006)" name="Text">
+      <a name="text" val="either ST or STR"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(690,1010)" name="Bit Extender">
+      <a name="in_width" val="1"/>
+    </comp>
+    <comp lib="0" loc="(390,740)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="isLD"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="2" loc="(410,710)" name="Multiplexer">
+      <a name="width" val="16"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(370,990)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="6"/>
+      <a name="label" val="PCoffset6"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="2" loc="(260,960)" name="Multiplexer">
+      <a name="width" val="16"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="8" loc="(933,756)" name="Text">
+      <a name="text" val="The proper PC value if the operation is"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(80,730)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="9"/>
+      <a name="label" val="PCoffset9"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(380,1030)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="DRorSR"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(760,740)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="ifLoad"/>
+    </comp>
+    <comp lib="0" loc="(680,760)" name="Bit Extender">
+      <a name="in_width" val="1"/>
+    </comp>
+    <comp lib="2" loc="(540,970)" name="Multiplexer">
+      <a name="width" val="16"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(90,1000)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="9"/>
+      <a name="label" val="PCoffset9"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(140,1000)" name="Bit Extender">
+      <a name="in_width" val="9"/>
+    </comp>
+    <comp lib="0" loc="(240,990)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="isST"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="1" loc="(740,740)" name="AND Gate">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="3" loc="(480,1000)" name="Adder">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="1" loc="(770,990)" name="AND Gate">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="3" loc="(220,720)" name="Adder">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(350,700)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="PCin"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="8" loc="(519,938)" name="Text">
+      <a name="text" val="check for STR"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(243,928)" name="Text">
+      <a name="text" val="check for ST"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(620,1010)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="evalAddON"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="8" loc="(852,432)" name="Text">
+      <a name="text" val="The second MUX decides whether the operation involves loading"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(655,224)" name="Text">
+      <a name="text" val="or not. The current instruction could just be empty."/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(654,207)" name="Text">
+      <a name="text" val="The first MUX decides whether the operation is arithmetic"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(853,449)" name="Text">
+      <a name="text" val="if it is, then it uses whichever PC was evaluated for the ifLoad"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(1063,241)" name="Text">
+      <a name="text" val="if it is, then it uses whichever PC was evaluated for the ifStore"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(1062,224)" name="Text">
+      <a name="text" val="The last MUX decides whether the operation involves storing"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(230,560)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="ifArithmetic"/>
+    </comp>
+    <comp lib="1" loc="(220,560)" name="AND Gate">
+      <a name="width" val="16"/>
+      <a name="size" val="30"/>
+      <a name="negate1" val="true"/>
+    </comp>
+    <comp lib="8" loc="(158,517)" name="Text">
+      <a name="text" val="check for arithmetic, no jumps in PC"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(170,540)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="PCin"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(170,570)" name="Bit Extender">
+      <a name="in_width" val="1"/>
+    </comp>
+    <comp lib="0" loc="(120,570)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="isNotArithmetic"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(280,810)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="6"/>
+      <a name="label" val="PCoffset6"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="3" loc="(420,800)" name="Adder">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(350,770)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="DRorSR"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(340,810)" name="Bit Extender">
+      <a name="in_width" val="6"/>
+    </comp>
+    <comp lib="8" loc="(346,853)" name="Text">
+      <a name="text" val="if LDR, use base+offset"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(376,682)" name="Text">
+      <a name="text" val="check for LD"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(510,750)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="isLDR"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="2" loc="(530,720)" name="Multiplexer">
+      <a name="width" val="16"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="8" loc="(530,687)" name="Text">
+      <a name="text" val="check for LDR"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(691,1049)" name="Text">
+      <a name="text" val="only output adjusted PC when evalAdd=true"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+  </circuit>
+  <circuit name="memoryOperationManagement">
+    <a name="circuit" val="memoryOperationManagement"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="circuitnamedbox" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <wire from="(650,370)" to="(650,380)"/>
+    <wire from="(690,430)" to="(690,440)"/>
+    <wire from="(580,620)" to="(580,630)"/>
+    <wire from="(580,760)" to="(580,770)"/>
+    <wire from="(610,430)" to="(610,440)"/>
+    <wire from="(660,640)" to="(710,640)"/>
+    <wire from="(220,500)" to="(220,510)"/>
+    <wire from="(220,640)" to="(220,650)"/>
+    <wire from="(220,400)" to="(220,410)"/>
+    <wire from="(220,720)" to="(220,730)"/>
+    <wire from="(300,520)" to="(350,520)"/>
+    <wire from="(300,740)" to="(350,740)"/>
+    <wire from="(600,470)" to="(640,470)"/>
+    <wire from="(660,470)" to="(700,470)"/>
+    <wire from="(270,420)" to="(310,420)"/>
+    <wire from="(310,420)" to="(350,420)"/>
+    <wire from="(560,770)" to="(580,770)"/>
+    <wire from="(560,730)" to="(580,730)"/>
+    <wire from="(270,630)" to="(300,630)"/>
+    <wire from="(630,750)" to="(660,750)"/>
+    <wire from="(200,170)" to="(220,170)"/>
+    <wire from="(200,650)" to="(220,650)"/>
+    <wire from="(200,610)" to="(220,610)"/>
+    <wire from="(220,620)" to="(230,620)"/>
+    <wire from="(220,640)" to="(230,640)"/>
+    <wire from="(580,740)" to="(590,740)"/>
+    <wire from="(580,760)" to="(590,760)"/>
+    <wire from="(610,430)" to="(620,430)"/>
+    <wire from="(700,470)" to="(700,480)"/>
+    <wire from="(600,470)" to="(600,480)"/>
+    <wire from="(580,650)" to="(580,660)"/>
+    <wire from="(580,730)" to="(580,740)"/>
+    <wire from="(660,750)" to="(710,750)"/>
+    <wire from="(220,530)" to="(220,540)"/>
+    <wire from="(220,610)" to="(220,620)"/>
+    <wire from="(220,430)" to="(220,440)"/>
+    <wire from="(220,750)" to="(220,760)"/>
+    <wire from="(300,630)" to="(350,630)"/>
+    <wire from="(640,430)" to="(640,470)"/>
+    <wire from="(660,430)" to="(660,470)"/>
+    <wire from="(560,660)" to="(580,660)"/>
+    <wire from="(560,620)" to="(580,620)"/>
+    <wire from="(270,520)" to="(300,520)"/>
+    <wire from="(270,740)" to="(300,740)"/>
+    <wire from="(630,640)" to="(660,640)"/>
+    <wire from="(630,430)" to="(630,530)"/>
+    <wire from="(670,430)" to="(670,530)"/>
+    <wire from="(200,220)" to="(220,220)"/>
+    <wire from="(200,760)" to="(220,760)"/>
+    <wire from="(200,720)" to="(220,720)"/>
+    <wire from="(220,430)" to="(230,430)"/>
+    <wire from="(220,410)" to="(230,410)"/>
+    <wire from="(220,730)" to="(230,730)"/>
+    <wire from="(220,750)" to="(230,750)"/>
+    <wire from="(220,510)" to="(230,510)"/>
+    <wire from="(220,530)" to="(230,530)"/>
+    <wire from="(210,540)" to="(220,540)"/>
+    <wire from="(210,500)" to="(220,500)"/>
+    <wire from="(210,400)" to="(220,400)"/>
+    <wire from="(210,440)" to="(220,440)"/>
+    <wire from="(680,430)" to="(690,430)"/>
+    <wire from="(580,630)" to="(590,630)"/>
+    <wire from="(580,650)" to="(590,650)"/>
+    <comp lib="0" loc="(350,420)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="isEmpty"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(200,220)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="label" val="opCode"/>
+    </comp>
+    <comp lib="0" loc="(210,400)" name="Constant">
+      <a name="width" val="16"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="3" loc="(270,630)" name="Comparator">
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="3" loc="(270,520)" name="Comparator">
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="8" loc="(149,406)" name="Text">
+      <a name="text" val="EMPTY"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(630,530)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="isEmpty"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="1" loc="(650,380)" name="OR Gate">
+      <a name="facing" val="north"/>
+      <a name="inputs" val="6"/>
+    </comp>
+    <comp lib="0" loc="(310,420)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="isEmpty"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(200,760)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="4"/>
+      <a name="label" val="opCode"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(220,220)" name="Tunnel">
+      <a name="width" val="4"/>
+      <a name="label" val="opCode"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="3" loc="(270,740)" name="Comparator">
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(600,480)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="isLD"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(200,650)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="4"/>
+      <a name="label" val="opCode"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(350,740)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="isLDR"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(220,170)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="fullInstruction"/>
+    </comp>
+    <comp lib="0" loc="(670,530)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="isJMP"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(650,370)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="label" val="notArithmetic"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(300,520)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="isJMP"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(210,440)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="fullInstruction"/>
+    </comp>
+    <comp lib="0" loc="(350,630)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="isLD"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(200,720)" name="Constant">
+      <a name="width" val="4"/>
+      <a name="value" val="0x6"/>
+    </comp>
+    <comp lib="0" loc="(210,500)" name="Constant">
+      <a name="width" val="4"/>
+      <a name="value" val="0xc"/>
+    </comp>
+    <comp lib="0" loc="(210,540)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="4"/>
+      <a name="label" val="opCode"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(200,170)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="fullInstruction"/>
+    </comp>
+    <comp lib="0" loc="(350,520)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="isJMP"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(200,610)" name="Constant">
+      <a name="width" val="4"/>
+      <a name="value" val="0x2"/>
+    </comp>
+    <comp lib="0" loc="(300,740)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="isLDR"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(700,480)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="isLDR"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="3" loc="(270,420)" name="Comparator">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(300,630)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="isLD"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="8" loc="(271,354)" name="Text">
+      <a name="text" val="operation is being done"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(274,372)" name="Text">
+      <a name="text" val="for better conditional control"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(278,337)" name="Text">
+      <a name="text" val="checks opCode to determine which memory"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(135,504)" name="Text">
+      <a name="text" val="JMP (opcode in hex)"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(146,724)" name="Text">
+      <a name="text" val="LDR (in hex)"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(150,614)" name="Text">
+      <a name="text" val="LD (in hex)"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(218,75)" name="Text">
+      <a name="text" val="It simply determines which memory operation is being performed"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(223,54)" name="Text">
+      <a name="text" val="The primary reason for this circuit is to reduce visual clutter in the main"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(560,620)" name="Constant">
+      <a name="width" val="4"/>
+      <a name="value" val="0x3"/>
+    </comp>
+    <comp lib="0" loc="(560,660)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="4"/>
+      <a name="label" val="opCode"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="3" loc="(630,640)" name="Comparator">
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(710,640)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="isST"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="8" loc="(506,624)" name="Text">
+      <a name="text" val="ST (in hex)"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(660,640)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="isST"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(560,730)" name="Constant">
+      <a name="width" val="4"/>
+      <a name="value" val="0x7"/>
+    </comp>
+    <comp lib="0" loc="(560,770)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="4"/>
+      <a name="label" val="opCode"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="3" loc="(630,750)" name="Comparator">
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(660,750)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="isSTR"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(710,750)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="isSTR"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="8" loc="(500,734)" name="Text">
+      <a name="text" val="STR (in hex)"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="0" loc="(610,440)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="isST"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(690,440)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="isSTR"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="8" loc="(648,269)" name="Text">
+      <a name="text" val="if true, the operation doesn't involve the ALU."/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(652,305)" name="Text">
+      <a name="text" val="overwritten back in the main in case the ALU tries to"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(651,288)" name="Text">
+      <a name="text" val="this check is used to prevent registers from being"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(649,322)" name="Text">
+      <a name="text" val="perform an operation on a memory instruction"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+  </circuit>
+</project>
