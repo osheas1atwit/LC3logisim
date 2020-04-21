@@ -27,8 +27,9 @@ less than the offset that would get to the address you want to store at. The ord
 change data causes the 'pcSelector' to receive an already-incremented PC value, so when the offset is
 added during phase 3, the destination value is written one spot above the originally intended address.
 Also, if the Logisim gives a 'label collision' error when loading the circuit, just rename any of the
-tunnels that output blue wires in the 'main' circuit to 'clock'. Otherwise, everything should work as
-intended.
+tunnels that output blue wires in the 'main' circuit to 'clock'. Lastly, this .circ was made with the
+.jar version of Logisim, not the Windows .exe version of the software. Otherwise, everything should work
+as intended.
 
 All of the tests listed above were previously tested with various register values and proved to work
 as intended. The AND and NOT operations were also tested early in the building process and once the
